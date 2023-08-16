@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+#navbar{
+    box-shadow: 0px -1px 10px -3px rgb(0, 0, 0);
+    background-color: white;
+}
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+.jumbotron-fluid{
+    background-color: #DCC1AB;
+    display: flex;
+    height: 94vh;
+    min-height: 600px;
+    #img-hero{
+        padding: 0;
+        
+      
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    #text-hero{
+        padding: 0;
+        
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        
+        .col-text{
+            min-width: 600px;
+            
+            margin-inline: auto;
+            padding-inline: 4rem;
+            .col-buttons{
+                
+                display: flex;
+                
+            }
+            h1{
+                font-size: 4rem;
+                width: 100%;
+                color: black;
+                font-weight: 500;
+                
+                
+                
+            }
+            p{
+                max-width: 75%;
+                font-family: 'Inter', sans-serif;
+                font-size: 1.1rem;
+                color: black;
+            }
+            button{
+                padding: 0.8rem 1.5rem;
+                border-radius:4rem;
+                min-width: 210px;
+                
+                }
+                button:first-of-type{
+                    
+                        margin-right: 2rem;
+                
+            }
+            .btn-dark{
+                background-color:#1B5B31;
+                border-color: #1B5B31;
+            }
+            .btn-outline-dark{
+                border-color: #1B5B31;
+                color:#1B5B31 ; 
+            }
+        }
+        
+    }
+}
+#hero{
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #DCC1AB;
+    
+    .row{
+        margin: 0;
+        
+        #text-hero{
+            padding: 0;
+            
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            margin-top: auto;
+            margin-bottom: auto;
+            
+            
+            .col-text{
+                
+                
+                margin-inline: auto;
+                padding-inline: 4rem;
+                .col-buttons{
+                    
+                    display: flex;
+                    
+                }
+                h1{
+                    font-size: 4rem;
+                    width: 100%;
+                    color: black;
+                    font-weight: 500;
+                    
+                    
+                    
+                }
+                p{
+                    max-width: 75%;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 1.1rem;
+                    color: black;
+                }
+                button{
+                    padding: 0.8rem 1.5rem;
+                    border-radius:4rem;
+                    min-width: 210px;
+                    
+                    }
+                    button:first-of-type{
+                        
+                            margin-right: 2rem;
+                    
+                }
+                .btn-dark{
+                    background-color:#1B5B31;
+                    border-color: #1B5B31;
+                }
+                .btn-outline-dark{
+                    border-color: #1B5B31;
+                    color:#1B5B31 ; 
+                }
+            }
+            
+        }
+        #img-hero{
+            padding: 0;
+            
+          
+            img{
+                width: 100%;
+                max-height: 800px;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+#oferta{
+    background-color:#F5F0EC ;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+        justify-content: center;
+       
+    .oferta-head{
+        width: 50vw;
+        margin-inline: auto;
+        margin-top: 4rem;
+        padding:2rem 4rem 0 0;
+        h1{
+            font-size: 2.5rem;
+            margin-bottom: 2.2rem;
+            font-weight: 500;
+            span{
+                font-family: 'Inter', sans-serif; 
+                font-style: italic;
+            }
+        }
+        p{
+            font-size: 1.2rem;
+            font-family: 'Inter', sans-serif; 
+        }
+        h6{
+            font-size: 0.9rem;
+            color: #1B5B31;
+            font-weight: 500;
+        }
+        
+        .oferta-text{
+            max-width: 650px;
+            
+        }
+    }
+    
+    .cards{
+        display: flex;
+        gap:3rem;
+        padding: 4rem;
+        justify-content: center;
+        max-width: 1300px;
+        margin-inline: auto;
+        margin-bottom: 5rem;
+        .card{
+            border-radius: 20px;
+            min-height: 300px;
+           align-items: center;
+           justify-content: center;
+            .card-body{
+                padding: 0;
+                flex: none;
+                margin: 1.8rem;
+                img{
+                    margin:  2rem 0;
+                }
+                h3{
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    
+                }
+                p{
+                    font-family: 'Inter', sans-serif; 
+                    font-size: 0.9rem; 
+                    margin-bottom: 4rem;
+                }
+                a{
+                    padding-bottom: 0.5rem;
+                    font-family: 'Inter', sans-serif; 
+                    border-bottom:solid 1px;
+                    position: relative;
+                    color: #1B5B31;
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 1.1rem;
+                    span{
+                        font-size: 1.6rem;
+                        
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
