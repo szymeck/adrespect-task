@@ -212,7 +212,7 @@ body{
         margin-bottom: 5rem;
         .card{
             border-radius: 20px;
-            min-height: 300px;
+            flex-basis: calc(33.33333% - 8px);
            align-items: center;
            justify-content: center;
             .card-body{
@@ -249,6 +249,63 @@ body{
                 }
                 
             }
+        }
+    }
+}
+
+#ofirmie{
+    display: grid;
+    background-color: #1B5B31;
+    grid-template-columns: 50% 2fr;
+    .ofirmie-img{
+        
+        
+        img{
+           height: 100%;
+            width: 100%;
+            object-fit: cover; 
+            max-height: 800px;
+        }
+    }
+    .ofirmie-container{
+       
+        display: flex;
+        justify-content: center;
+            align-items: center;
+            margin-inline: auto;
+            
+        .ofirmie-text{
+            margin:5rem ;
+            max-width: 500px;
+            color: white;
+            button{
+                padding: 0.8rem 1.5rem;
+                    border-radius:4rem;
+                    min-width: 210px;
+                    span{
+                        font-size: 1.3rem;
+                    }
+            }
+            h6{
+                font-size: 0.9rem;  
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+            h2{
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+                span{
+                    font-family: 'Inter', sans-serif; 
+                    font-style: italic;
+                    
+                }
+            }
+            p{
+                font-size: 0.9rem;
+                margin-bottom: 4rem;
+                font-family: 'Inter', sans-serif; 
+            }
+            
         }
     }
 }
