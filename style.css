@@ -9,12 +9,72 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.carousel {
+  height: 94vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+.carousel button:first-of-type {
+  right: 60px;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+  display: flex;
+  flex-direction: row;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  bottom: -80px !important;
+  right: 0;
+  transform: translateY(-50%);
+  color: black;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  background-color: #f5f0ec;
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.pre {
+  left: 1rem;
+  bottom: 0;
+}
+
+.carousel-button.nex {
+  right: 1rem;
+  bottom: 0;
+}
+
 #navbar {
   box-shadow: 0px -1px 10px -3px rgb(0, 0, 0);
   background-color: white;
-  /* Styles for the search bar container */
-  /* Styles for the search bar */
-  /* Styles for the search button */
 }
 #navbar .search-bar-container {
   position: absolute;
@@ -28,10 +88,12 @@ body {
   transition: opacity 0.3s ease, transform 0.3s ease;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  pointer-events: none;
 }
 #navbar .show {
   opacity: 1;
   transform: translateY(6px);
+  pointer-events: all;
 }
 #navbar .navbar-colapse {
   transition: all 0.3s ease;
@@ -113,7 +175,7 @@ body {
   color: #1b5b31;
 }
 #navbar a:hover::after {
-  width: 100%; /* Width on hover */
+  width: 100%;
 }
 
 .navbar-brand {
@@ -133,65 +195,68 @@ body {
 .jumbotron-fluid {
   display: flex;
 }
-.jumbotron-fluid #img-hero {
+.jumbotron-fluid ul li #img-hero {
   padding: 0;
 }
-.jumbotron-fluid #img-hero img {
+.jumbotron-fluid ul li #img-hero img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.jumbotron-fluid #text-hero {
+.jumbotron-fluid ul li #text-hero {
   padding: 0;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-top: auto;
   margin-bottom: auto;
 }
-.jumbotron-fluid #text-hero .col-text {
+.jumbotron-fluid ul li #text-hero .col-text {
   min-width: 600px;
   margin-inline: auto;
   padding-inline: 4rem;
 }
-.jumbotron-fluid #text-hero .col-text .col-buttons {
+.jumbotron-fluid ul li #text-hero .col-text .col-buttons {
   display: flex;
 }
-.jumbotron-fluid #text-hero .col-text h1 {
+.jumbotron-fluid ul li #text-hero .col-text h1 {
   font-size: 4rem;
   width: 100%;
   color: black;
   font-weight: 500;
 }
-.jumbotron-fluid #text-hero .col-text p {
+.jumbotron-fluid ul li #text-hero .col-text p {
   max-width: 75%;
   font-family: "Inter", sans-serif;
   font-size: 1.1rem;
   color: black;
 }
-.jumbotron-fluid #text-hero .col-text button {
-  padding: 0.8rem 1.5rem;
+.jumbotron-fluid ul li #text-hero .col-text button {
+  padding: 0.5rem 1.5rem;
   border-radius: 4rem;
-  min-width: 210px;
+  height: 60px;
 }
-.jumbotron-fluid #text-hero .col-text button:first-of-type {
+.jumbotron-fluid ul li #text-hero .col-text button span {
+  font-size: 1.5rem;
+}
+.jumbotron-fluid ul li #text-hero .col-text button:first-of-type {
   margin-right: 2rem;
 }
-.jumbotron-fluid #text-hero .col-text .btn-dark {
+.jumbotron-fluid ul li #text-hero .col-text .btn-dark {
   background-color: #1b5b31;
   border-color: #1b5b31;
   transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.jumbotron-fluid #text-hero .col-text .btn-dark:hover {
+.jumbotron-fluid ul li #text-hero .col-text .btn-dark:hover {
   transform: translate(-2px, -4px);
   box-shadow: 2px 4px 4px black;
 }
-.jumbotron-fluid #text-hero .col-text .btn-outline-dark {
+.jumbotron-fluid ul li #text-hero .col-text .btn-outline-dark {
   border-color: #1b5b31;
   color: #1b5b31;
   transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.jumbotron-fluid #text-hero .col-text .btn-outline-dark:hover {
+.jumbotron-fluid ul li #text-hero .col-text .btn-outline-dark:hover {
   background-color: transparent;
   transform: translate(-2px, -4px);
   box-shadow: 2px 4px 4px #1b5b31;
@@ -236,7 +301,7 @@ body {
 #hero .row #text-hero .col-text button {
   padding: 0.8rem 1.5rem;
   border-radius: 4rem;
-  min-width: 210px;
+  height: 60px;
 }
 #hero .row #text-hero .col-text button:first-of-type {
   margin-right: 2rem;
@@ -341,7 +406,7 @@ body {
   color: #1b5b31;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 }
 #oferta .cards .card .card-body a span {
   font-size: 1.6rem;
@@ -434,7 +499,6 @@ body {
   width: 100%;
   margin-inline: auto;
   z-index: 4;
-  position: relative;
   overflow: hidden;
 }
 
@@ -447,6 +511,12 @@ body {
   bottom: 0;
   background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), #dcc1ab);
   pointer-events: none;
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+.gallery.hide-gradient:after {
+  opacity: 0.3;
 }
 
 .item {
@@ -528,6 +598,7 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  background-color: #dcc1ab;
 }
 #load-more:hover {
   background-color: #111111;
@@ -687,6 +758,9 @@ body {
   #ofirmie {
     scroll-margin-top: 300px !important;
   }
+  .slide {
+    flex-direction: column;
+  }
   .navbar-nav {
     float: left !important;
   }
@@ -694,23 +768,29 @@ body {
     height: 30px;
   }
   .nav-item a {
-    font-size: 2rem;
+    font-size: 1.4rem;
     height: 50px;
   }
   .jumbotron-fluid {
     flex-direction: column;
   }
+  .carousel {
+    min-height: 100vh;
+  }
   .col-text {
     min-width: 0px !important;
     padding-inline: 1rem !important;
+  }
+  .col-text p {
+    max-width: none !important;
   }
   .col-text h1 {
     font-size: 3rem !important;
   }
   .col-text button {
-    width: 230px;
     margin-bottom: 1rem;
     margin-inline: 0;
+    max-width: 300px;
   }
   .col-text button:first-of-type {
     margin-right: 0 !important;
@@ -727,9 +807,10 @@ body {
   .oferta-head {
     padding: 0 0 0 0 !important;
     margin-inline-start: 20px !important;
+    width: auto !important;
   }
   .oferta-head h1 {
-    text-align: center;
+    text-align: left;
     margin-inline: auto;
   }
   #ofirmie {

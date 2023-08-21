@@ -1,3 +1,24 @@
+//slider jumbotron
+const buttonsCarousel = document.querySelectorAll("[data-carousel-button]");
+
+buttonsCarousel.forEach((button) => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]");
+
+    const activeSlide = slides.querySelector("[data-active]");
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+    if (newIndex < 0) newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length) newIndex = 0;
+
+    slides.children[newIndex].dataset.active = true;
+    delete activeSlide.dataset.active;
+  });
+});
+
+//scrolltoview navbar onclick
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -28,6 +49,21 @@ document.querySelectorAll('button[href^="#"]').forEach((anchor) => {
   });
 });
 
+//scrolltotop logo onclick
+const logo = document.querySelector(".navbar-brand");
+logo.addEventListener("click", (event) => {
+  event.preventDefault();
+  scrollToTop();
+});
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+//burger menu
 const navbarToggler = document.querySelector(".navbar-toggler");
 const navbarCollapse = document.querySelector(".navbar-collapse");
 const brand = document.querySelector(".navbar-brand");
@@ -52,17 +88,19 @@ navLinks.forEach((link) => {
   });
 });
 
+//wyszukiwarka onclick
 const searchIconLink = document.getElementById("search-icon-link");
 const searchBarContainer = document.querySelector(".search-bar-container");
 const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", () => {
-    searchBarContainer.classList.toggle("show");
-  });
-  
+  searchBarContainer.classList.toggle("show");
+});
+
 searchIconLink.addEventListener("click", () => {
   searchBarContainer.classList.toggle("show");
 });
 
+//masonry galeria
 var macyInstance = Macy({
   container: ".gallery",
   trueOrder: false,
@@ -153,6 +191,10 @@ loadMoreButton.addEventListener("click", function () {
       loadMoreButton.disabled = true;
     }
   }
+});
+
+loadMoreButton.addEventListener('click', function(){
+  gallery.classList.add('hide-gradient');
 });
 
 closeButton.addEventListener("click", () => {

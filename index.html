@@ -69,35 +69,72 @@
       </div>
     </header>
     <main>
-      <div class="jumbotron-fluid" id="hero">
-        <div class="col" id="text-hero">
-          <div class="col-text">
-            <h1 class="pb-3">
-              Nowoczesna<br />aranżacja<br />
-              Twojego ogrodu
-            </h1>
-            <p class="pb-4">
-              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
-              realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
-              podejściem do każdego projektu.
-            </p>
-            <div class="col-buttons">
-              <button type="button" href="#insta" class="btn btn-dark">
-                Skontaktuj się z nami
-              </button>
-              <button
-                type="button"
-                href="#galeria"
-                class="btn btn-outline-dark"
-              >
-                Zobacz nasze realizacje
-              </button>
+      <div class="jumbotron-fluid carousel" data-carousel id="hero">
+        <button class="carousel-button" data-carousel-button="pre">
+          &#8249;
+        </button>
+        <button class="carousel-button" data-carousel-button="nex">
+          &#8250;
+        </button>
+        <ul data-slides>
+          <li class="slide" data-active>
+            <div class="col" id="text-hero">
+              <div class="col-text">
+                <h1 class="pb-3">
+                  Nowoczesna<br />aranżacja<br />
+                  Twojego ogrodu
+                </h1>
+                <p class="pb-4">
+                  Marka GiardDesign to wieloletnie doświadczenie i wysoka
+                  estetyka realizacji. Oferujemy kompleksowy zakres usług z
+                  indywidualnym podejściem do każdego projektu.
+                </p>
+                <div class="col-buttons">
+                  <button type="button" href="#insta" class="btn btn-dark">
+                    Skontaktuj się z nami
+                  </button>
+                  <button
+                    type="button"
+                    href="#galeria"
+                    class="btn btn-outline-dark"
+                  >
+                    Zobacz nasze realizacje <span>&#x2193;</span>
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col" id="img-hero">
-          <img src="/img/hero-img.png" />
-        </div>
+            <div class="col" id="img-hero">
+              <img src="/img/hero-img.png" />
+            </div>
+          </li>
+          <li class="slide">
+            <div class="col" id="text-hero">
+              <div class="col-text">
+                <h1 class="pb-3">Lorem, ipsum dolor.</h1>
+                <p class="pb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                  quos reiciendis voluptatum culpa error impedit, animi adipisci
+                  nam consectetur nulla?
+                </p>
+                <div class="col-buttons">
+                  <button type="button" href="#insta" class="btn btn-dark">
+                    Skontaktuj się z nami
+                  </button>
+                  <button
+                    type="button"
+                    href="#galeria"
+                    class="btn btn-outline-dark"
+                  >
+                    Zobacz nasze realizacje <span>&#x2193;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col" id="img-hero">
+              <img src="/img/gal18.jpg" />
+            </div>
+          </li>
+        </ul>
       </div>
 
       <div class="container" id="oferta">
@@ -160,7 +197,7 @@
                 Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
                 zaawansowanych technologii.
               </p>
-              <a href="#">Dowiedz się więcej<span> &#8594;</span></a>
+              <a href="#">Zobacz nasze realizacje<span> &#8594;</span></a>
             </div>
           </div>
         </div>
@@ -185,7 +222,7 @@
               małoobsługowe, dostosowane do współczesnego trybu życia.
             </p>
             <button href="#insta" class="btn btn-outline-light">
-              Poznaj nas blizej<span> &#8594;</span>
+              Poznaj nas bliżej<span> &#8594;</span>
             </button>
           </div>
         </div>
@@ -206,7 +243,7 @@
 
           <img class="item" src="img/gal8.jpg" alt="" />
 
-          <div class="gradient">
+          <div class="gradient" id="gradient">
             <span></span>
           </div>
         </div>
@@ -217,7 +254,7 @@
           <img id="modal-image" src="" alt="Modal Image" />
           <span class="next">&#8250;</span>
         </div>
-        <div id="load-more">Rozwiń <span>&#x2193;</span></div>
+        <div id="load-more" >Rozwiń <span>&#x2193;</span></div>
       </div>
       <div class="container-fluid" id="insta">
         <div class="insta-content">
@@ -253,7 +290,7 @@
               <li>Kontakt</li>
               <li>Instagram</li>
               <li>Facebook</li>
-              <li>Linkedin</li>
+              <li>LinkedIn</li>
             </ul>
             <ul class="kontakt">
               <li>0000-000-000</li>
