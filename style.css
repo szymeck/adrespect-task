@@ -406,7 +406,6 @@ body {
 #galeria .galeria-head {
   width: 50vw;
   margin-inline: auto;
-  margin-top: 4rem;
   padding: 5rem 4rem 0 0;
 }
 #galeria .galeria-head h2 {
@@ -632,7 +631,7 @@ body {
 }
 #footer .text1 .line hr {
   border: solid 1px;
-  color: #F5F0EC;
+  color: #f5f0ec;
 }
 #footer .text1 .line2 {
   display: flex;
