@@ -81,8 +81,14 @@ navbarToggler.addEventListener("click", () => {
 });
 
 const navLinks = document.querySelectorAll(".nav-link");
+const dropLinks = document.querySelectorAll(".linkdropdown");
 
 navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navbarCollapse.classList.remove("show");
+  });
+});
+dropLinks.forEach((link) => {
   link.addEventListener("click", () => {
     navbarCollapse.classList.remove("show");
   });

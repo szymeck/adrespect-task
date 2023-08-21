@@ -785,6 +785,17 @@ body {
       height: 50px;
     }
   }
+  .linkdropdown {
+    display: none !important;
+  }
+
+  .nav-item:hover .linkdropdown {
+    display: block !important;
+    position: relative !important;
+    opacity: 1;
+    transform: translateY(6px);
+  }
+
   .jumbotron-fluid {
     flex-direction: column;
   }
@@ -802,13 +813,13 @@ body {
     }
     button {
       margin-bottom: 1rem;
-      margin-inline: 0;
-      max-width: 300px;
+      margin-inline: auto;
+      width: 300px;
       
     }
     button:first-of-type {
-      margin-right: 0 !important;
-      margin-inline: 0 !important;
+      margin-inline: auto !important;
+      width: 300px;
     }
   }
   .col-buttons {
