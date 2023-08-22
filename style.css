@@ -543,6 +543,7 @@ body {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   transform: translateY(-50%);
   z-index: 2;
@@ -597,6 +598,7 @@ body {
   transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   background-color: #dcc1ab;
 }
@@ -815,7 +817,8 @@ body {
   }
   .oferta-head {
     padding: 0 0 0 0 !important;
-    margin-inline-start: 20px !important;
+    -webkit-margin-start: 20px !important;
+            margin-inline-start: 20px !important;
     width: auto !important;
   }
   .oferta-head h1 {

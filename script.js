@@ -148,14 +148,7 @@ const additionalImages = [
   "img/gal24.jpg",
 ];
 
-thumbnails.forEach((thumbnail) => {
-  thumbnail.addEventListener("click", () => {
-    const imageUrl = thumbnail.src;
-    modalImage.src = imageUrl;
-    modal.style.display = "block";
-    body.style.overflow = "hidden";
-  });
-});
+
 function setupThumbnailClickListeners() {
   const thumbnails = document.querySelectorAll(".thumbnail");
 
@@ -167,21 +160,11 @@ function setupThumbnailClickListeners() {
       body.style.overflow = "hidden";
     });
   });
+  macyInstance.reInit();
 }
 
 setupThumbnailClickListeners();
 
-function addImageAndUpdateListeners(imageUrl) {
-  var img = document.createElement("img");
-  img.src = imageUrl;
-  img.classList.add("thumbnail");
-
-  document.querySelector(".gallery").appendChild(img);
-
-  macyInstance.reInit();
-
-  setupThumbnailClickListeners();
-}
 
 let currentAdditionalImageIndex = 0;
 
@@ -196,6 +179,7 @@ loadMoreButton.addEventListener("click", function () {
     if (currentAdditionalImageIndex === additionalImages.length) {
       loadMoreButton.disabled = true;
     }
+    macyInstance.reInit();
   }
 });
 
