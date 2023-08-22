@@ -103,7 +103,27 @@ body {
     background-color: white !important;
   }
   .nav-item {
+    
     position: relative;
+    margin-right: 1rem;
+  
+  }
+  .navbar-nav{
+    li:first-of-type{
+      margin-right: 1.6rem;
+    }
+    #arrow::after{
+      border: solid #111111;
+    border-width: 0 1px 1px 0;
+    bottom: auto;
+    content: "";
+    padding: 4px;
+    position: absolute;
+    right: -8px;
+    top: 12px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    }
   }
   .nav-link {
     padding-bottom: 0.2rem;
@@ -181,7 +201,9 @@ body {
     width: 100%; 
   }
 }
-
+.navbar{
+  margin-inline: 3rem;
+}
 .navbar-brand {
   font-weight: 700;
   font-size: 1.2rem;
@@ -778,6 +800,12 @@ body {
     img {
       height: 30px;
     }
+  }
+  #arrow::after{
+   
+  right: 11px !important;
+  top: 15px !important;
+  
   }
   .nav-item {
     a {
